@@ -47,7 +47,7 @@ def main():
                                          edit_text)
             print(f"[INFO] everything done! sleeping for 15 mins...")
 
-            time.sleep(15 * 60)
+            time.sleep(120 * 60)
 
 
 main()
