@@ -20,22 +20,22 @@ def main():
     with user_client:
         while True:
             print("[INFO] starting to check uptime..")
-            edit_text = f"Our Bot's List & Their Status:\n\n"
+            edit_text = f"Our Bot's List & Their Status:\n\nNote All Bot Status will Edit In 30 Mins"
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
-                snt = user_client.send_message(bot, '/start')
+                snt = user_client.send_message(bot, '/help')
 
-                time.sleep(15)
+                time.sleep(30)
 
                 msg = user_client.get_history(bot, 1)[0]
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
-                    edit_text += f"⚡️ @{bot} status: ❎\n\n"
+                    edit_text += f"😆 @{bot} AVAILABLITY: ❎\n\n"
                     user_client.send_message(bot_owner,
-                                             f"⚡️ @{bot} status: ❎")
+                                             f"😋 @{bot} Not Available: ❎")
                 else:
                     print(f"[INFO] all good with @{bot}")
-                    edit_text += f"⚡️ @{bot} status: ✅\n\n"
+                    edit_text += f"⚡️ @{bot} AVAILABLITY: ✅\n\n"
                 user_client.read_history(bot)
 
             utc_now = datetime.datetime.utcnow()
