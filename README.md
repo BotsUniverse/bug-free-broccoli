@@ -1,0 +1,6 @@
+# bug-free-broccoli
+
+#HEROKU 
+.> STEP 1 : Fork
+.> STEP 2 : Connect
+.> STEP 3 : Set APP ID And API HASH, BOT OWNER ID, STATUS_MESSAGE_ID, PYROGRAM_STRING SESION
