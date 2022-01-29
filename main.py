@@ -22,6 +22,7 @@ def main():
             print("[INFO] starting to check uptime..")
             edit_text = f"Our Bot's List & Their Status:\n\nNote All Bot Status will Edit In 30 Mins"
             user_client.send_message(bot_owner, f'Starting To Check Bots..')
+            user_client.send_message(-1001482059289, f'Starting To Check Bots..')
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 msg = (f"[INFO] checking @{bot}")
