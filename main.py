@@ -24,6 +24,8 @@ def main():
             user_client.send_message(bot_owner, f'Starting To Check Bots..')
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
+                msg = (f"[INFO] checking @{bot}")
+                user_client.send_message(-1001482059289, msg) 
                 snt = user_client.send_message(bot, '/start')
 
                 time.sleep(30)
@@ -31,12 +33,16 @@ def main():
                 msg = user_client.get_history(bot, 1)[0]
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
-                    edit_text += f"😆 @{bot} AVAILABLITY: ❎\n\n"
+                    jio = (f"[WARNING] @{bot} is down")
+                    user_client.send_message(-1001482059289, jio)
+                    edit_text += f"😆 @{bot} AVAILABLITY: Not Avaliable\n\n"
                     user_client.send_message(bot_owner,
-                                             f"😋 @{bot} Not Available: ❎")
+                                             f"😋 @{bot} Available: Nope..")
                 else:
                     print(f"[INFO] all good with @{bot}")
-                    edit_text += f"⚡️ @{bot} AVAILABLITY: ✅\n\n"
+                    kya = f"[INFO] all good with @{bot}"
+                    user_client.send_message(-1001482059289, kya)
+                    edit_text += f"⚡️ @{bot} AVAILABLITY: Yesh\n\n"
                 user_client.read_history(bot)
 
             utc_now = datetime.datetime.utcnow()
