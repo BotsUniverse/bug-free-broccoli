@@ -35,14 +35,14 @@ def main():
                     print(f"[WARNING] @{bot} is down")
                     jio = (f"[WARNING] @{bot} is down")
                     user_client.send_message(-1001482059289, jio)
-                    edit_text += f"😆 @{bot} AVAILABLITY: Not Avaliable\n\n"
+                    edit_text += f"💔 @{bot} AVAILABLITY: Not Avaliable\n\n"
                     user_client.send_message(bot_owner,
-                                             f"😋 @{bot} Available: Nope..")
+                                             f"💤 @{bot} Available: Nope..")
                 else:
                     print(f"[INFO] all good with @{bot}")
                     kya = f"[INFO] all good with @{bot}"
                     user_client.send_message(-1001482059289, kya)
-                    edit_text += f"⚡️ @{bot} AVAILABLITY: Yesh\n\n"
+                    edit_text += f"❤ @{bot} AVAILABLITY: Yesh\n\n"
                 user_client.read_history(bot)
 
             utc_now = datetime.datetime.utcnow()
