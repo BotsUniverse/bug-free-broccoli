@@ -1,7 +1,7 @@
 import os
 import time
 import datetime
-
+import requests
 import pyrogram
 
 user_session_string = os.environ.get("user_session_string")
@@ -15,6 +15,15 @@ api_hash = os.environ.get("api_hash")
 user_client = pyrogram.Client(
     user_session_string, api_id=api_id, api_hash=api_hash)
 
+api_url = 'www.botsuniverse.live'
+api_url2 = 'api-bu-v2.herokuapp.com'
+api_url3 = 'apibu.herokuapp.com'
+er = requests.get(api_url)
+ew = requests.get(api_url2)
+eww = requests.get(api_url3)
+op = er.status_code
+yu = ew.status_code
+oo = eww.status_code
 
 def main():
     with user_client:
@@ -39,6 +48,36 @@ def main():
                     edit_text += f"💔 @{bot} AVAILABLITY: Not Avaliable\n\n"
                     user_client.send_message(bot_owner,
                                              f"💤 @{bot} Available: Nope..")
+                    if op != 200:
+                        user_client.send_message(bot_owner,
+                                                 f"💤[Api Bu]({api_url}) Available: Nope..",
+                                                 parse_mode="md")
+                    # Tell If Alive?
+                    else:
+                        user_client.send_message(bot_owner,
+                                                 f"❤ [Api Bu]({api_url}) Available: Yesh...",
+                                                 parse_mode="md")
+
+                    if yu != 200:
+                        user_client.send_message(bot_owner,
+                                                 f"💤[Api Bu V2]({api_url2}) Available: Nope..",
+                                                 parse_mode="md")
+                    
+                    else:
+                        user_client.send_message(bot_owner,
+                                                 f"❤ [Api Bu V2]({api_url2}) Available: Yesh...",
+                                                 parse_mode="md")
+
+                    if oo != 200:
+                        user_client.send_message(bot_owner,
+                                                 f"💤[Bots Universe Website]({api_url3}) Available: Nope..",
+                                                 parse_mode="md")
+                    
+                    else:
+                        user_client.send_message(bot_owner,
+                                                 f"❤ [Bots Universe Website]({api_url3}) Available: Yesh...",
+                                                 parse_mode="md")
+
                 else:
                     print(f"[INFO] all good with @{bot}")
                     kya = f"[INFO] all good with @{bot}"
