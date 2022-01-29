@@ -15,7 +15,7 @@ api_hash = os.environ.get("api_hash")
 user_client = pyrogram.Client(
     user_session_string, api_id=api_id, api_hash=api_hash)
 
-api_url = 'http://www.botsuniverse.live'
+api_url = 'http://botsuniverse.live'
 api_url2 = 'http://api-bu-v2.herokuapp.com'
 api_url3 = 'http://apibu.herokuapp.com'
 er = requests.get(api_url)
