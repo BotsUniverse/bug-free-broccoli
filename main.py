@@ -48,35 +48,6 @@ def main():
                     edit_text += f"💔 @{bot} AVAILABLITY: Not Avaliable\n\n"
                     user_client.send_message(bot_owner,
                                              f"💤 @{bot} Available: Nope..")
-                    if op != 200:
-                        user_client.send_message(bot_owner,
-                                                 f"💤[Api Bu]({api_url}) Available: Nope..",
-                                                 parse_mode="md")
-                    # Tell If Alive?
-                    else:
-                        user_client.send_message(bot_owner,
-                                                 f"❤ [Api Bu]({api_url}) Available: Yesh...",
-                                                 parse_mode="md")
-
-                    if yu != 200:
-                        user_client.send_message(bot_owner,
-                                                 f"💤[Api Bu V2]({api_url2}) Available: Nope..",
-                                                 parse_mode="md")
-                    
-                    else:
-                        user_client.send_message(bot_owner,
-                                                 f"❤ [Api Bu V2]({api_url2}) Available: Yesh...",
-                                                 parse_mode="md")
-
-                    if oo != 200:
-                        user_client.send_message(bot_owner,
-                                                 f"💤[Bots Universe Website]({api_url3}) Available: Nope..",
-                                                 parse_mode="md")
-                    
-                    else:
-                        user_client.send_message(bot_owner,
-                                                 f"❤ [Bots Universe Website]({api_url3}) Available: Yesh...",
-                                                 parse_mode="md")
 
                 else:
                     print(f"[INFO] all good with @{bot}")
@@ -93,6 +64,39 @@ def main():
             user_client.edit_message_text(update_channel, status_message_id,
                                          edit_text)
             print(f"[INFO] everything done! sleeping for 4 Hours")
+            if op != 200:
+                        user_client.send_message(bot_owner,
+                                                 f"💤[Api Bu]({api_url}) Available: Nope..",
+                                                 parse_mode="md")
+                    # Tell If Alive?
+            else:
+                user_client.send_message(bot_owner,
+                                         f"❤ [Api Bu]({api_url}) Available: Yesh...",
+                                         disable_web_page_preview=True,
+                                         parse_mode="md")
+            if yu != 200:
+                user_client.send_message(bot_owner,
+                                         f"💤[Api Bu V2]({api_url2}) Available: Nope..",
+                                         disable_web_page_preview=True,
+                                         parse_mode="md")
+            
+            else:
+                user_client.send_message(bot_owner,
+                                         f"❤ [Api Bu V2]({api_url2}) Available: Yesh...",
+                                         disable_web_page_preview=True,
+                                         parse_mode="md")
+            if oo != 200:
+                user_client.send_message(bot_owner,
+                                         f"💤[Bots Universe Website]({api_url3}) Available: Nope..",
+                                         disable_web_page_preview=True,
+                                         parse_mode="md")
+            
+            else:
+                        user_client.send_message(bot_owner,
+                                                 f"❤ [Bots Universe Website]({api_url3}) Available: Yesh...",
+                                                 disable_web_page_preview=True,
+                                                 parse_mode="md")
+                                                 
             user_client.send_message(bot_owner, f'Everything Done..\nNext Check Is After Four Hour')
 
             time.sleep(120 * 120)
