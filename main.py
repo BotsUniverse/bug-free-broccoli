@@ -23,7 +23,7 @@ def main():
             edit_text = f"Our Bot's List & Their Status:\n\nNote All Bot Status will Edit In 30 Mins"
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
-                snt = user_client.send_message(bot, '/help')
+                snt = user_client.send_message(bot, '/start')
 
                 time.sleep(30)
 
