@@ -20,7 +20,7 @@ def main():
     with user_client:
         while True:
             print("[INFO] starting to check uptime..")
-            edit_text = f"Our Bot's List & Their Status:\n\nNote All Bot Status will Edit In 30 Mins"
+            edit_text = f"Our Bot's List & Their Status:\n\nNote: All Bot Status will Be Auto Checked\nIn 4 Hours"
             user_client.send_message(bot_owner, f'Starting To Check Bots..')
             user_client.send_message(-1001482059289, f'Starting To Check Bots..')
             for bot in bots:
@@ -53,10 +53,10 @@ def main():
 
             user_client.edit_message_text(update_channel, status_message_id,
                                          edit_text)
-            print(f"[INFO] everything done! sleeping for 15 mins...")
-            user_client.send_message(bot_owner, f'Everything Done..\nNext Check Is After One Hour')
+            print(f"[INFO] everything done! sleeping for 4 Hours")
+            user_client.send_message(bot_owner, f'Everything Done..\nNext Check Is After Four Hour')
 
-            time.sleep(120 * 30)
+            time.sleep(120 * 120)
 
 
 main()
