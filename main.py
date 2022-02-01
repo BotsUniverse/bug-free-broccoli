@@ -64,36 +64,36 @@ def main():
             user_client.edit_message_text(update_channel, status_message_id,
                                          edit_text)
             print(f"[INFO] everything done! sleeping for 4 Hours")
-            if op != 200:
+            if op == 200:
                         user_client.send_message(bot_owner,
-                                                 f"💤[Api Bu]({api_url}) Available: Nope..",
+                                                 f"💤[Api Bu]({api_url3}) **Available**: Yep !",
                                                  parse_mode="md")
                     # Tell If Alive?
             else:
                 user_client.send_message(bot_owner,
-                                         f"❤ [Api Bu]({api_url}) Available: Yesh...",
+                                         f"❤ [Api Bu]({api_url3}) **Available**: Nope..",
                                          disable_web_page_preview=True,
                                          parse_mode="md")
-            if yu != 200:
+            if yu == 200:
                 user_client.send_message(bot_owner,
-                                         f"💤[Api Bu V2]({api_url2}) Available: Nope..",
+                                         f"💤[Api Bu V2]({api_url2}) Available: Yep...",
                                          disable_web_page_preview=True,
                                          parse_mode="md")
             
             else:
                 user_client.send_message(bot_owner,
-                                         f"❤ [Api Bu V2]({api_url2}) Available: Yesh...",
+                                         f"❤ [Api Bu V2]({api_url2}) Available: Nope...",
                                          disable_web_page_preview=True,
                                          parse_mode="md")
-            if oo != 200:
+            if oo == 200:
                 user_client.send_message(bot_owner,
-                                         f"💤[Bots Universe Website]({api_url3}) Available: Nope..",
+                                         f"💤[Bots Universe Website]({api_url}) Available: Yep...",
                                          disable_web_page_preview=True,
                                          parse_mode="md")
             
             else:
                         user_client.send_message(bot_owner,
-                                                 f"❤ [Bots Universe Website]({api_url3}) Available: Yesh...",
+                                                 f"❤ [Bots Universe Website]({api_url}) Available: Nope....",
                                                  disable_web_page_preview=True,
                                                  parse_mode="md")
                                                  
