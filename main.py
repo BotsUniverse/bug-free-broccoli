@@ -31,11 +31,11 @@ def main():
             print("[INFO] starting to check uptime..")
             edit_text = f"Our Bot's List & Their Status:\n\nNote: All Bot Status will Be Auto Checked\nIn 4 Hours\n\n"
             user_client.send_message(bot_owner, f'Starting To Check Bots..')
-            user_client.send_message(-1001482059289, f'Starting To Check Bots..')
+            #user_client.send_message(-1001482059289, f'Starting To Check Bots..')
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 msg = (f"[INFO] checking @{bot}")
-                user_client.send_message(-1001482059289, msg) 
+                #user_client.send_message(-1001482059289, msg) 
                 snt = user_client.send_message(bot, '/start')
 
                 time.sleep(30)
@@ -44,7 +44,7 @@ def main():
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
                     jio = (f"[WARNING] @{bot} is down")
-                    user_client.send_message(-1001482059289, jio)
+                    #user_client.send_message(-1001482059289, jio)
                     edit_text += f"💔 @{bot} AVAILABLITY: Not Avaliable\n\n"
                     user_client.send_message(bot_owner,
                                              f"💤 @{bot} Available: Nope..")
@@ -52,7 +52,7 @@ def main():
                 else:
                     print(f"[INFO] all good with @{bot}")
                     kya = f"[INFO] all good with @{bot}"
-                    user_client.send_message(-1001482059289, kya)
+                    #user_client.send_message(-1001482059289, kya)
                     edit_text += f"❤ @{bot} AVAILABLITY: Yesh\n\n"
                 user_client.read_history(bot)
 
