@@ -35,7 +35,7 @@ def main():
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 msg = (f"[INFO] checking @{bot}")
-                #user_client.send_message(-1001482059289, msg) 
+                user_client.send_message(bot_owner, msg) 
                 snt = user_client.send_message(bot, '/start')
 
                 time.sleep(30)
@@ -44,7 +44,7 @@ def main():
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
                     jio = (f"[WARNING] @{bot} is down")
-                    #user_client.send_message(-1001482059289, jio)
+                    user_client.send_message(bot_owner, jio)
                     edit_text += f"💔 @{bot} AVAILABLITY: Not Avaliable\n\n"
                     user_client.send_message(bot_owner,
                                              f"💤 @{bot} Available: Nope..")
