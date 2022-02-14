@@ -1,0 +1,27 @@
+{
+    "api_id": "",
+    "api_hash": "",
+    "phone_number": "",
+    "bots": {
+        "@Secratorybot": "",
+        "@phonecalltrackerbot": "",
+        "@SecratoryV2bot": "",
+        "@Ytube_mp3_bot": "",
+        "@venila_telegraph_bot": "",
+        "@vcpb_gdbot": "",
+        "@Venilabot": "",
+        "@simple_cryptography_bot": "",
+        "@carbonnow_bot": "",
+        "@scrptogbot": "",
+        "@bu_kutty_dl_bot": "",
+        "@bu_flipkart_bot": "",
+        "@anime_srch_bot": "",
+        "@Snap_hunt_bot": "",
+        "http://botsuniverse.live": "",
+        "http://apibu.herokuapp.com": "",
+        "http://api-bu-v2.herokuapp.com":""
+    },
+    "channelId": null,
+    "messageId": null,
+    "userId": "-1001387769814"
+}
